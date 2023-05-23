@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+@import url("switch.css");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F3F5FC;
+    font-family: 'Inter';
+    transition: all 0.3s ease;
+}
+  
+header {
+    display: flex;
+    width: 100%;
+    padding: 1em 0;
+    height: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.imglogo {
+    margin: 0;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.titulo-vo{
+    text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #00acee 0px 0px 20px, #00acee 0px 0px 30px, #00acee 0px 0px 40px, #00acee 0px 0px 50px, #00acee 0px 0px 75px;
+    -webkit-text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #00acee 0px 0px 20px, #00acee 0px 0px 30px, #00acee 0px 0px 40px, #00acee 0px 0px 50px, #00acee 0px 0px 75px;
+    -moz-text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #00acee 0px 0px 20px, #00acee 0px 0px 30px, #00acee 0px 0px 40px, #00acee 0px 0px 50px, #00acee 0px 0px 75px;
+}
+
+.modos {
+    margin: 0 1em 0 2em;
+    display: flex;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10em;
+    gap: 4em;
+    height: auto;
+}
+
+section.caja1 {
+    margin: 2em 0 0;
+}
+
+textarea {
+    background-color: transparent;
+    border: none;
+    resize: none;
+    font-size: 25px;
+    font-family: 'Inter';
+    width: 100%;
+    height: 410px;
+}
+
+.campo1::placeholder {
+    color: #0A3871;
+    font-size: 25px;
+    font-family: 'Inter';
+}
+
+.campo1-vo::placeholder{
+    color: white;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+textarea.campo1 {
+    color: #0A3871;
+}
+
+textarea.campo2 {
+    color: black;
+}
+
+p.indicacion {
+    display: flex;
+    gap: 5px;
+    color: #65747D;
+}
+
+p.indicacion:before {
+    content: "\0021";
+    background: #65747D;
+    color: white;
+    width: 1.2em;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.botones {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.btn1 {
+    width: 328px;
+    height: 67px;
+    background-color: #0A3871;
+    color: white;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 19px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.32, 0, 0.67, 0) 0s;
+}
+
+.btn2 {
+    width: 328px;
+    height: 67px;
+    background-color: #D8DFE8;
+    color: #0A3871;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 19px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.32, 0, 0.67, 0) 0s;
+}
+
+.btn1:hover, .btn2:hover {
+    opacity: 0.7;
+}
+
+section.caja2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 2.2em;
+    margin: 0;
+    padding: 0 1em 8px;
+    background-color: white;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    -webkit-box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.campo-enc {
+    position: relative;
+    margin: 2em 0 0
+}
+
+.mensaje-vacio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 0em;
+    top: 5em;
+    gap: 16px;
+}
+
+.mensaje-vacio p, .mensaje-vacio strong {
+    text-align: center;
+}
+
+.muñeco {
+    width: 100%;
+    height: 200px;
+}
+
+#mensaje-copiado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    padding: 5px 0;
+    background-color: #FE0081;
+    color: white;
+    border: 1px solid #F3F5FC;
+    border-radius: 10px;
+    visibility: hidden;
+    transition: height 300ms ease 0s;
+
+}
+
+#copiar {
+    display: none;
+}
+
+.copiar {
+    width: 328px;
+    height: 67px;
+    background: white;
+    color: #0A3871;
+    font-size: 25px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    
+}
+
+.copiar:active {
+    background: #0A3871;
+    color: white;
+}
+
+@media screen and (max-width:1024px) {
+    main {
+        padding: 0 3em;
+        gap: 1em;
+    }
+    
+    .copiar {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1023px), screen and (max-width:768px) {
+    main {
+        flex-direction: column;
+        padding: 0 3em;
+        gap: 4em;
+    }
+
+    textarea.campo1 {
+        height: 410px;
+    }
+
+    p.indicacion {
+        gap: 2px;
+    }
+
+    section.caja2 {
+        gap: 0;
+        align-items: center;
+    }
+
+    .campo-enc {
+        width: 100%;
+    }
+
+    .mensaje-vacio {
+        width: 100%;
+        top: 1em;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .muñeco {
+        display: none;
+    }
+
+    textarea.campo2 {
+        height: 133px;
+    }
+
+    .copiar {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:480px), screen and (max-width:375px) {
+    header {
+        gap: 2em;
+    }
+
+    h1 {
+        margin: 0;
+        font-size: 20px
+    }
+
+    .modos {
+        margin: 0 1em 0 1em;
+    }
+
+    main {
+        padding: 0 1em;
+    }
+
+    .mensaje-vacio {
+        top: 2em;
+        margin: 0;
+    }
+
+    textarea.campo1 {
+        height: 400px;
+    }
+
+    textarea.campo2 {
+        height: 185px;
+    }
+
+    .btn1, .btn2, .copiar {
+        font-size: 19px;
+    }
+}
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Encriptador</title>
+    <link rel="icon" href="./img/icon/locked.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo"><img class="imglogo" src="./img/logo.png" alt="logo" /></div>
+        <h1>Encriptador de textos</h1>
+        <div class="switcher">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+    <main>
+    <section class="caja1">
+        <article class="campo-texto">
+            <textarea id="campo-entrada" class="campo1" placeholder="Ingresa el texto aquí..."></textarea>
+            <p class="indicacion">Solo letras minúsculas y sin acentos</p>
+        </article>
+        <div class="botones">
+            <input type="submit" class="btn1" id="encriptar" value="Encriptar"/>
+            <input type="submit" class="btn2" id="desencriptar" value="Desencriptar"/>
+        </div>
+    </section>
+    <section class="caja2">
+       <span id="mensaje-copiado" class="copiado">¡Copiado!</span>
+        <article class="campo-enc">
+            <div class="mensaje-vacio">
+                <img class="muñeco" src="./img/muñeco.png" alt="muñequito"/>
+                <strong>Ningún mensaje fue encontrado</strong>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <textarea id="campo-encriptado" class="campo2" disabled></textarea>
+        </article>
+        <button id="copiar" class="copiar" type="button">Copiar</button>
+    </section>
+    </main> 
+    <script src="script.js" type="module"></script> 
+</body>
+</html>

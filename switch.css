@@ -1,0 +1,75 @@
+.switcher{
+    display: flex;
+    align-items: center;
+}
+/* Estilo base para el toggle switch */
+.switch {
+  display: inline-block;
+  margin: 0 1em 0 1em;
+  position: relative;
+  width: 50px;
+  height: 27px;
+}
+
+/* Estilo del input checkbox (oculto) */
+.switch input {
+  display: none;
+}
+
+/* Estilo del slider del toggle switch */
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0a3871;
+  border: 1px solid black;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Estilo del slider cuando está en modo activado */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Estilo del input checkbox cuando está en modo activado */
+input:checked + .slider {
+  background-color: white;
+}
+
+input:checked + .slider::before {
+  background-color: #0a3871;
+}
+
+/* Estilo del slider cuando está en modo activado */
+input:checked + .slider::before {
+  transform: translateX(25px);
+}
+
+@media screen and (max-width:430px) {
+    input:checked + .slider::before {
+        transform: translateX(25px);
+    }
+}
+
+@media screen and (max-width:390px){
+    input:checked + .slider::before {
+        transform: translateX(23px);
+    }
+} 
+
+@media screen and (max-width:350px){
+    input:checked + .slider::before {
+        transform: translateX(21px);
+    }
+} 
